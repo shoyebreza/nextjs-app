@@ -1,0 +1,5 @@
+export const metadata = { title: "About" };
+
+export default function AboutPage() {
+  return <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28"><p className="eyebrow">Our point of view</p><div className="mt-6 grid gap-12 lg:grid-cols-[.8fr_1.2fr]"><h1 className="font-display text-5xl font-bold leading-none tracking-[-0.06em] text-ink">Work should feel <span className="text-coral">human.</span></h1><div className="max-w-xl"><p className="text-xl leading-8 text-ink">Lumen exists to help teams make meaningful progress without mistaking busyness for momentum.</p><p className="mt-6 leading-7 text-muted">We build tools that make the invisible work visible: the decisions, habits, and small moments of clarity that help good teams do their best work together.</p><div className="mt-10 border-l-2 border-coral pl-5 text-sm font-semibold text-ink">Less noise. More context. Better days.</div></div></div></section>;
+}

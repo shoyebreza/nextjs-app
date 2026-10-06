@@ -1,0 +1,6 @@
+import Link from "next/link";
+import { Button } from "@/components/ui/Button";
+
+export default function NotFound() {
+  return <main className="flex min-h-screen items-center justify-center bg-paper px-6 py-16"><div className="w-full max-w-xl text-center"><div className="mx-auto grid h-20 w-20 place-items-center rounded-full bg-yellow font-display text-2xl font-bold text-ink">404</div><p className="eyebrow mt-8">Page not found</p><h1 className="mt-4 font-display text-4xl font-bold tracking-[-0.06em] text-ink sm:text-5xl">This page took a wrong turn.</h1><p className="mx-auto mt-5 max-w-md text-base leading-7 text-muted">The page you are looking for may have moved, or the link may be out of date.</p><div className="mt-8 flex flex-wrap justify-center gap-3"><Button href="/">Back to home</Button><Link href="/dashboard" className="inline-flex min-h-11 items-center justify-center rounded-full border border-line bg-white px-5 text-sm font-semibold text-ink transition hover:border-teal hover:text-teal">Open dashboard</Link></div></div></main>;
+}

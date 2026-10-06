@@ -1,26 +1,40 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8f8f4;
+  --foreground: #142629;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+  --color-paper: #f8f8f4;
+  --color-ink: #142629;
+  --color-muted: #6f7d7a;
+  --color-line: #dce3dd;
+  --color-sage: #e7eee6;
+  --color-teal: #287a72;
+  --color-coral: #e76f51;
+  --color-yellow: #f3c969;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), sans-serif;
 }
+
+button, a, input { outline-color: #287a72; }
+
+.eyebrow { color: #287a72; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+.panel { border: 1px solid #dce3dd; border-radius: 1.25rem; background: white; padding: 1.5rem; }
+.panel-title { margin-top: 0.35rem; color: #142629; font-family: var(--font-display), sans-serif; font-size: 1.5rem; font-weight: 700; letter-spacing: -0.04em; }
+.stat-card { border: 1px solid #dce3dd; border-radius: 1.25rem; background: white; padding: 1.25rem; }
+.stat-card p { color: #6f7d7a; font-size: 0.75rem; }
+.stat-card strong { display: block; margin: 0.5rem 0; color: #142629; font-family: var(--font-display), sans-serif; font-size: 2rem; letter-spacing: -0.05em; }
+.stat-card span { font-size: 0.7rem; font-weight: 700; }
+.field-label { display: block; color: #142629; font-size: 0.8rem; font-weight: 700; }
+.input { width: 100%; border: 1px solid #dce3dd; border-radius: 0.75rem; background: white; padding: 0.8rem 0.9rem; color: #142629; font-size: 0.875rem; outline: none; }
+.input:focus { border-color: #287a72; box-shadow: 0 0 0 3px rgba(40, 122, 114, 0.12); }
