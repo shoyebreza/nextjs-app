@@ -49,3 +49,7 @@ Production checks:
 npm run lint
 npm run build
 ```
+
+## Request protection
+
+`src/proxy.ts` adds security headers, request IDs, suspicious bot detection, and a lightweight sliding-window flood limit. Public marketing routes remain crawlable by trusted search crawlers. The current counter is process-local for a portable starter; use a shared Redis-compatible store before deploying multiple instances or relying on it for security-critical rate limiting.
