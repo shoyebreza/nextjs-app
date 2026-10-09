@@ -1,8 +1,8 @@
 export const metadata = { title: "Settings" };
 
 export default function SettingsPage() {
-  return
-  <div className="mx-auto max-w-4xl px-6 py-8 lg:px-10 lg:py-10">
+  return (
+    <div className="mx-auto max-w-4xl px-6 py-8 lg:px-10 lg:py-10">
     <div className="panel">
       <p className="eyebrow">Workspace</p>
       <h2 className="panel-title">Settings</h2>
@@ -28,5 +28,6 @@ export default function SettingsPage() {
         </div>
       </div>
     </div>
-  </div>;
+    </div>
+  );
 }

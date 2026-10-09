@@ -50,6 +50,13 @@ npm run lint
 npm run build
 ```
 
+## Authentication
+
+Authentication uses Auth.js with a credentials provider. Copy `.env.example` to
+`.env.local`, set a long random `AUTH_SECRET`, and configure `AUTH_EMAIL` and
+`AUTH_PASSWORD` before starting the app. Dashboard routes redirect unauthenticated
+visitors to `/login`.
+
 ## Request protection
 
 `src/proxy.ts` adds security headers, request IDs, suspicious bot detection, and a lightweight sliding-window flood limit. Public marketing routes remain crawlable by trusted search crawlers. The current counter is process-local for a portable starter; use a shared Redis-compatible store before deploying multiple instances or relying on it for security-critical rate limiting.
