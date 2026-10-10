@@ -1,6 +1,10 @@
+import { requireRole } from "@/lib/authorization";
+
 export const metadata = { title: "Settings" };
 
-export default function SettingsPage() {
+export default async function SettingsPage() {
+  await requireRole("admin");
+
   return (
     <div className="mx-auto max-w-4xl px-6 py-8 lg:px-10 lg:py-10">
     <div className="panel">

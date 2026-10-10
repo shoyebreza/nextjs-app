@@ -54,8 +54,12 @@ npm run build
 
 Authentication uses Auth.js with a credentials provider. Copy `.env.example` to
 `.env.local`, set a long random `AUTH_SECRET`, and configure `AUTH_EMAIL` and
-`AUTH_PASSWORD` before starting the app. Dashboard routes redirect unauthenticated
-visitors to `/login`.
+`AUTH_PASSWORD` before starting the app. Set `AUTH_ROLE` to `admin` or `member`
+to control the configured account's permissions. Dashboard routes redirect
+unauthenticated visitors to `/login`, and the settings route is restricted to
+administrators. This starter has one credentials-based account, so the role is
+configured globally; a database-backed user table is needed when each user
+needs an independent role.
 
 ## Request protection
 
